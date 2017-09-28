@@ -1,4 +1,4 @@
-function [dF_F z zz] = dFoverF(y)
+function [dF_F  dF z zz] = dFoverF(y)
 %Uses a LSF to get an approximate dFoverF for a bleaching trace
 
 % Estimate baseline with asymmetric least squares
@@ -33,7 +33,7 @@ end
 %%calcuate mean of each alsm trace 
 top = mean(zz);
 bot = mean(z);
-
+dF =(top-bot);
 dF_F = ((top-bot))/bot ;
 
 
